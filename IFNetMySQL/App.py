@@ -12,7 +12,7 @@ def exibirMenu():
 
 def main():
     op = int(input("informe a opção:"))
-
+    
     while True:
         if op == 1 :
             nomeRD = input("informe o nome da rede social: \n")
@@ -29,6 +29,9 @@ def main():
             email = input("informe o email: \n")
             senha = input("informe a senha: \n")
             u.deletarUsuario (email, senha)
+            
+       elif op == 0:
+            break 
             
 if __name__ == '__main__':
     main()
