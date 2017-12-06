@@ -14,6 +14,9 @@ def main():
     op = int(input("informe a opção:"))
     
     while True:
+        
+        exibirMenu()
+        
         if op == 1 :
             nomeRD = input("informe o nome da rede social: \n")
             descricao = input("descreva a rede social: ")
