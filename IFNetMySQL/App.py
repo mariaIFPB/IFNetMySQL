@@ -3,6 +3,9 @@ from database.configDB import config
 from database.RedeSocialDAO import RedeSocialDAO
 from model.Usuario import Usuario
 
+'''
+Função para exibir o menu
+'''
 def exibirMenu():
     print("Rede Social \n"
         " 1 - Definir nome da rede social.\n"
@@ -10,6 +13,15 @@ def exibirMenu():
         " 3 - Excluir conta usuário \n"
         " 0 - Sair")
 
+'''
+Criação da Rede Social (nome e descrição)
+'''
+def criarRedeSocial():
+    nomeRD = input("informe o nome da rede social: \n")
+    descricao = input("descreva a rede social: ")
+    redeSocial = RedeSocial(nomeRD, descricao)
+    redeSocialDAO = RedeSocialDAO()
+    
 def main():
     op = int(input("informe a opção:"))
     
@@ -18,9 +30,7 @@ def main():
         exibirMenu()
         
         if op == 1 :
-            nomeRD = input("informe o nome da rede social: \n")
-            descricao = input("descreva a rede social: ")
-            RedeSocialDAO()
+            criarRedeSocial()
 
         elif op ==2 :
             nome = input("informe seu nome: \n")
